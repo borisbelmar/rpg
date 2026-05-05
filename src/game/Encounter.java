@@ -30,6 +30,9 @@ public class Encounter {
             combatant1.attack(combatant2);
             if (combatant2.getHp() <= 0) {
                 System.out.println(combatant1.getName() + " gana la batalla!");
+                if (combatant1 instanceof Hero && combatant2 instanceof Monster) {
+                    ((Hero) combatant1).transferLoot((Monster) combatant2);
+                }
                 break;
             }
             combatant2.attack(combatant1);

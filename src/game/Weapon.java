@@ -5,13 +5,13 @@ public class Weapon extends Item {
     private String type;
 
     public Weapon(String name, int price, int damage) {
-        super(name, price);
+        super(name, price, 1);
         this.damage = damage;
         this.type = "NEUTRAL";
     }
 
     public Weapon(String name, int price, int damage, String type) {
-        super(name, price);
+        super(name, price, 1);
         this.damage = damage;
         this.type = type;
     }

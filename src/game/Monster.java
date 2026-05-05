@@ -1,11 +1,15 @@
 package game;
 
+import java.util.ArrayList;
+
 public class Monster extends Combatant {
     private int damage;
+    private ArrayList<Item> loot;
 
-    public Monster(String name, int hp, int damage) {
+    public Monster(String name, int hp, int damage, ArrayList<Item> loot) {
         super(name, hp);
         this.damage = damage;
+        this.loot = loot;
     }
 
     public int getDamage() {
@@ -14,6 +18,10 @@ public class Monster extends Combatant {
 
     public void setDamage(int damage) {
         this.damage = damage;
+    }
+
+    public ArrayList<Item> getLoot() {
+        return loot;
     }
 
     public void printSpawn() {
